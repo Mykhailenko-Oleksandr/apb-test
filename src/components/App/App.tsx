@@ -1,11 +1,12 @@
-import css from "./App.module.css";
-import { Toaster } from "react-hot-toast";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "../../pages/HomePage/HomePage";
 
 export default function App() {
   return (
-    <div className={css.app}>
-      <header></header>
-      <Toaster />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      {/* <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} /> */}
+    </Routes>
   );
 }
