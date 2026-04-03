@@ -1,0 +1,80 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 3vw, 1rem);
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+.inputBox {
+  position: relative;
+}
+
+.input {
+  border-radius: 20px;
+  line-height: 125%;
+  font-size: clamp(1rem, 5vw, 1.4rem);
+  padding: clamp(0.6rem, 3vw, 0.9rem);
+  outline: none;
+  border: 1px solid #e96316;
+  max-height: 56px;
+  max-width: 200px;
+
+  transition: border-color 300ms ease;
+
+  &.error {
+    border-color: red;
+  }
+
+  &:hover {
+    border-color: #c74c06;
+  }
+}
+
+.errorMassage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  padding-left: 20px;
+  color: red;
+  font-size: 15px;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 125%;
+  font-size: clamp(1rem, 5vw, 1.4rem);
+  padding: clamp(0.6rem, 3vw, 0.9rem);
+  border-radius: 20px;
+  width: 110px;
+  max-height: 56px;
+  border: none;
+  background-color: #e96316;
+  color: #fff;
+
+  transition: background-color 300ms ease;
+
+  &:hover {
+    background-color: #c74c06;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #a19f9f;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .input {
+    max-width: unset;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .input {
+    width: 330px;
+  }
+}

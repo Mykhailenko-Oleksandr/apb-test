@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.link {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
