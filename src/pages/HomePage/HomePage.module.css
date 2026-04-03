@@ -1,0 +1,26 @@
+.section {
+  padding: 0 20px;
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.titleVin {
+  font-size: 22px;
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .section {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}

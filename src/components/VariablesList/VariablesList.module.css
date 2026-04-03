@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  max-width: 600px;
+  max-height: 500px;
+  overflow-y: auto;
+
+  margin: 0 auto;
+  background-color: #e9e2e2;
+  padding: 20px;
+  border: 2px solid rgb(32, 32, 32);
+  border-radius: 30px;
+}
