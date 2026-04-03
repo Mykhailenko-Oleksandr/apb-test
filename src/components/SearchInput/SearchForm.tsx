@@ -12,6 +12,7 @@ import { useState } from "react";
 import Loader from "../Loader/Loader";
 import type { ApiError } from "../../types/apiError";
 import toast from "react-hot-toast";
+import { useSearchStore } from "../../services/storeSearch";
 
 const schema = yup
   .object({
@@ -25,6 +26,7 @@ interface Props {
 
 export default function SearchForm({ setResult }: Props) {
   const [isLoader, setIsLoader] = useState(false);
+  const setNewStore = useSearchStore((state) => state.setNewStore);
 
   const {
     register,
@@ -40,6 +42,7 @@ export default function SearchForm({ setResult }: Props) {
       setIsLoader(true);
       const autoInfo = await getInfoVinCode(data);
       setResult(autoInfo);
+      setNewStore(autoInfo);
     } catch (error: unknown) {
       const err = error as ApiError;
 

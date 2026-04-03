@@ -4,7 +4,7 @@
   padding-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
-.titleVin {
+.title {
   font-size: 22px;
   line-height: 150%;
   text-align: center;

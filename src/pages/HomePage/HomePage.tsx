@@ -23,9 +23,11 @@ export default function HomePage() {
       <section className={css.section}>
         <SearchForm setResult={(result) => setResultSearch(result)} />
 
+        <h2 className={css.title}>History</h2>
+
         {resultSearch && (
           <>
-            <h2 className={css.titleVin}>{resultSearch.SearchCriteria}</h2>
+            <h3 className={css.title}>{resultSearch.SearchCriteria}</h3>
 
             {visibleVariables && visibleVariables.length > 0 && (
               <VariablesList variables={visibleVariables} />
