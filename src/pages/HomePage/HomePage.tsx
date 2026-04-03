@@ -4,11 +4,15 @@ import Header from "../../components/Header/Header";
 import SearchForm from "../../components/SearchInput/SearchForm";
 import type { ResponseDecoderVin } from "../../services/api";
 import VariablesList from "../../components/VariablesList/VariablesList";
+import { useSearchStore } from "../../services/storeSearch";
+import SearchStoreList from "../../components/SearchStoreList/SearchStoreList";
 
 export default function HomePage() {
   const [resultSearch, setResultSearch] = useState<ResponseDecoderVin | null>(
     null,
   );
+  const searchStore = useSearchStore((state) => state.searchStore);
+
   console.log(resultSearch);
 
   const visibleVariables = resultSearch?.Results.slice(
@@ -24,6 +28,7 @@ export default function HomePage() {
         <SearchForm setResult={(result) => setResultSearch(result)} />
 
         <h2 className={css.title}>History</h2>
+        {searchStore.length > 0 && <SearchStoreList store={searchStore} />}
 
         {resultSearch && (
           <>
