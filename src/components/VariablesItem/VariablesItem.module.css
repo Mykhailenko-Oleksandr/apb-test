@@ -1,0 +1,15 @@
+.item {
+  border: 1px solid #e96316;
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+
+.variable {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: 500;
+
+  & span {
+    font-weight: 400;
+    color: rgb(43, 43, 43);
+  }
+}

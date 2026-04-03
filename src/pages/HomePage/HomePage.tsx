@@ -12,7 +12,7 @@ export default function HomePage() {
   console.log(resultSearch);
 
   const visibleVariables = resultSearch?.Results.slice(
-    6,
+    5,
     resultSearch.Results.length,
   ).filter((variable) => variable.Value !== null);
 

@@ -8,7 +8,9 @@ interface Props {
 export default function VariablesItem({ variable }: Props) {
   return (
     <li className={css.item}>
-      <p>sdfsdf</p>
+      <p className={css.variable}>
+        {variable.Variable}: <span>{variable.Value}</span>
+      </p>
     </li>
   );
 }
