@@ -27,8 +27,12 @@ export default function HomePage() {
       <section className={css.section}>
         <SearchForm setResult={(result) => setResultSearch(result)} />
 
-        <h2 className={css.title}>History</h2>
-        {searchStore.length > 0 && <SearchStoreList store={searchStore} />}
+        {searchStore.length > 0 && (
+          <>
+            <h2 className={css.title}>History</h2>
+            <SearchStoreList store={searchStore} />
+          </>
+        )}
 
         {resultSearch && (
           <>
