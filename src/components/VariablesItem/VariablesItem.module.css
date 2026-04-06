@@ -1,5 +1,6 @@
 .item {
-  border: 1px solid #e96316;
+  border-bottom: 1px solid #e96316;
+  background-color: #c7c4c4;
   border-radius: 20px;
   padding: 4px 10px;
 }
