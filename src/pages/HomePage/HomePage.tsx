@@ -24,7 +24,10 @@ export default function HomePage() {
       {searchStore.length > 0 && (
         <>
           <h2 className={css.title}>History</h2>
-          <SearchStoreList store={searchStore} />
+          <SearchStoreList
+            store={searchStore}
+            setResult={(result) => setResultSearch(result)}
+          />
         </>
       )}
 
