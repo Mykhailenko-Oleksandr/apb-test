@@ -1,0 +1,16 @@
+.item {
+  border: 1px solid #e96316;
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+
+.link {
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  font-weight: 500;
+  color: #1714d4;
+  transition: color 300ms ease;
+
+  &:hover {
+    color: #110f85;
+  }
+}

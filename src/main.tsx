@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import "modern-normalize";
 import "./global.css";
 import { Toaster } from "react-hot-toast";
+import Header from "./components/Header/Header";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+        <Header />
         <App />
       </BrowserRouter>
     </QueryClientProvider>

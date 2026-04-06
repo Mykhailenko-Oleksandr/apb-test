@@ -8,9 +8,9 @@ interface Props {
 export default function SearchStoreList({ store }: Props) {
   return (
     <ul className={css.list}>
-      {store.map((search) => {
+      {store.map((search, index) => {
         return (
-          <li className={css.item}>
+          <li className={css.item} key={index}>
             <p className={css.text}>{search.SearchCriteria}</p>
           </li>
         );

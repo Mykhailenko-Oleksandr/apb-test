@@ -1,0 +1,42 @@
+.section {
+  padding: 0 20px;
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.title {
+  font-size: 22px;
+  line-height: 150%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.infoText {
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+
+  & span {
+    font-weight: 400;
+  }
+}
+
+.textMassage {
+  font-size: 18px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .section {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
